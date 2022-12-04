@@ -126,7 +126,6 @@ def processing_mimic3(file_adm, file_dxx, file_txx, file_drug, file_drg, output_
             act['Drugs'] = drugs
             act['Death'] = death_flag
             visits.append(act)
-        print('patient {} is processed!'.format(sub_id))
         patient['visits'] = visits
         patients.append(patient)
 

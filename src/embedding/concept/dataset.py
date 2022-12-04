@@ -28,7 +28,7 @@ class ConceptDataset(DatasetTemplate):
             # actual window
             actual_window = self.skip_window - reduced_window
 
-            # concat all codes togeter for one patient, and the format is [code, date]
+            # concat all codes together for one patient, and the format is [code, date]
             for s_visit in selected_visits:
                 dt = datetime.datetime.strptime(s_visit['admsn_dt'], "%Y%m%d")
                 codes = s_visit['DXs']
@@ -36,13 +36,11 @@ class ConceptDataset(DatasetTemplate):
                     codes.extend(s_visit['CPTs'])
                 for code in codes:
                     selected_codes.append([code, dt])
-
-            # sampling codes based on their frequncy in dataset
+            # sampling codes based on their frequency in dataset
             if self.is_sample:
                 sampled_codes = [code for code in selected_codes if self.word_sample[code[0]] > random.rand() * 2 ** 32]
             else:
                 sampled_codes = selected_codes
-
             # generate batch samples
             for pos, word in enumerate(sampled_codes):
 
@@ -55,7 +53,7 @@ class ConceptDataset(DatasetTemplate):
 
                 context_len = len(context_indices)
                 if context_len > 0:
-                    # if context lenth is less than two times actual window, and padding
+                    # if context length is less than two times actual window, and padding
                     if context_len < 2 * actual_window:
                         for i in range(2 * actual_window - context_len):
                             context_indices.append([0, 0])

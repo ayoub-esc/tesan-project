@@ -2,6 +2,7 @@ import os
 from os.path import join
 import json
 import numpy as np
+from src.utils.configs import cfg
 import pandas as pd
 
 root_dir, _ = os.path.split(os.path.abspath(__file__))
@@ -101,8 +102,9 @@ def mce_trans():
 
 def tesan_trans(model_type='tesan'):
     if model_type == 'cbow':
-        origin_weights = np.loadtxt(cbow_file, delimiter=",")
+        origin_weights = np.genfromtxt(cbow_file, skip_header=2, delimiter=" ")
         weights = []
+        origin_weights = origin_weights[:, 1:101]
         embedding_size = origin_weights.shape[1]
         padding_array = np.zeros(embedding_size)
         weights.append(padding_array)
@@ -165,6 +167,6 @@ if __name__ == '__main__':
     # sg_file = join(root_dir, 'dataset/baselines/SG/mimic3/sg_sk_6_epoch_10.vect')
     # tesa_file = join(root_dir, 'dataset/baselines/TeSAN/mimic3/mimic3_model_tesa_epoch_30_sk_6.vect')
 
-    # tesan_trans(cbow_file, 'cbow')
-    tesan_trans('sg')
+    tesan_trans('cbow')
+    # tesan_trans('sg')
     # tesan_trans(tesa_file, model_type='tesa')

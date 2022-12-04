@@ -1,15 +1,15 @@
 import tensorflow as tf
 import math
 
-from src.nn_utils.attention import multi_dimensional_attention, self_attention_with_dense,\
+from src.nn_utils.attention import multi_dimensional_attention, self_attention_with_dense, \
     temporal_interval_sa_with_dense, interval_with_dense
 from src.embedding.concept.ablation_study import normal_attention
 from src.template.model import ModelTemplate
 
 
 class ConceptModel(ModelTemplate):
-    def __init__(self,scope,dataset):
-        super(ConceptModel, self).__init__(scope,dataset)
+    def __init__(self, scope, dataset):
+        super(ConceptModel, self).__init__(scope, dataset)
 
         # ------ start ------
         self.context_fusion = None
@@ -48,10 +48,11 @@ class ConceptModel(ModelTemplate):
         # time interval between context code and label code
         self.context_interval = self.train_inputs[:, :, 1]
 
-        #building model and other parts
+        # building model and other parts
         self.context_fusion, self.code_embeddings = self.build_network()
         self.loss, self.optimizer, self.nce_weights = self.build_loss_optimizer()
         self.final_embeddings, self.final_weights = self.build_embedding()
+        print(self.final_weights.shape)
         self.final_emb_sim, self.final_wgt_sim = self.build_similarity()
 
     def build_loss_optimizer(self):
@@ -60,7 +61,7 @@ class ConceptModel(ModelTemplate):
         with tf.compat.v1.name_scope('weights'):
             nce_weights = tf.Variable(
                 tf.random.truncated_normal([self.vocabulary_size, self.embedding_size],
-                                    stddev=1.0 / math.sqrt(self.embedding_size)))
+                                           stddev=1.0 / math.sqrt(self.embedding_size)))
         with tf.compat.v1.name_scope('biases'):
             nce_biases = tf.Variable(tf.zeros([self.vocabulary_size]))
 
@@ -99,63 +100,62 @@ class ConceptModel(ModelTemplate):
 
                 date_embed = tf.nn.embedding_lookup(params=date_embeddings, ids=self.train_masks)
 
-                    # self_attention
+                # self_attention
                 cntxt_embed = temporal_interval_sa_with_dense(rep_tensor=context_embed,
-                                                               rep_mask=self.context_mask,
-                                                               interval_tensor = date_embed,
-                                                               is_train=True,
-                                                               activation=self.activation,
-                                                               is_scale = self.is_scale)
+                                                              rep_mask=self.context_mask,
+                                                              interval_tensor=date_embed,
+                                                              is_train=True,
+                                                              activation=self.activation,
+                                                              is_scale=self.is_scale)
 
                 # Attention pooling
-                context_fusion = multi_dimensional_attention(cntxt_embed,self.context_mask,is_train=True)
+                context_fusion = multi_dimensional_attention(cntxt_embed, self.context_mask, is_train=True)
 
         elif self.model_type == 'interval':
             with tf.compat.v1.name_scope(self.model_type):
-                #self_attention
+                # self_attention
                 init_date_embed = tf.random.uniform([self.dates_size, self.embedding_size], -1.0, 1.0)
                 date_embeddings = tf.Variable(init_date_embed)
                 date_embed = tf.nn.embedding_lookup(params=date_embeddings, ids=self.train_masks)
                 cntxt_embed = interval_with_dense(rep_tensor=context_embed,
-                                                        rep_mask=self.context_mask,
-                                                        interval_tensor=date_embed,
-                                                        is_train=True,
-                                                        activation=self.activation,
-                                                        is_scale = self.is_scale)
+                                                  rep_mask=self.context_mask,
+                                                  interval_tensor=date_embed,
+                                                  is_train=True,
+                                                  activation=self.activation,
+                                                  is_scale=self.is_scale)
 
                 # attention pooling
-                context_fusion = multi_dimensional_attention(cntxt_embed,self.context_mask,is_train=True)
+                context_fusion = multi_dimensional_attention(cntxt_embed, self.context_mask, is_train=True)
 
         elif self.model_type == 'multi-sa':
             with tf.compat.v1.name_scope(self.model_type):
-                #self_attention
+                # self_attention
                 cntxt_embed = self_attention_with_dense(rep_tensor=context_embed,
                                                         rep_mask=self.context_mask,
                                                         is_train=True,
                                                         activation=self.activation,
-                                                        is_scale = self.is_scale)
+                                                        is_scale=self.is_scale)
 
                 # attention pooling
-                context_fusion = multi_dimensional_attention(cntxt_embed,self.context_mask,is_train=True)
+                context_fusion = multi_dimensional_attention(cntxt_embed, self.context_mask, is_train=True)
 
         elif self.model_type == 'normal-sa':
             with tf.compat.v1.name_scope(self.model_type):
-                #self_attention
+                # self_attention
                 cntxt_embed = normal_attention(rep_tensor=context_embed,
-                                                        rep_mask=self.context_mask,
-                                                        is_train=True,
-                                                        activation=self.activation)
+                                               rep_mask=self.context_mask,
+                                               is_train=True,
+                                               activation=self.activation)
 
                 # attention pooling
-                context_fusion = multi_dimensional_attention(cntxt_embed,self.context_mask,is_train=True)
-
+                context_fusion = multi_dimensional_attention(cntxt_embed, self.context_mask, is_train=True)
 
         return context_fusion, code_embeddings
 
     def build_embedding(self):
         with tf.compat.v1.name_scope('build_embedding'):
             # Compute the cosine similarity between minibatch examples and all embeddings.
-            norm = tf.sqrt(tf.reduce_sum(input_tensor=tf.square(self.code_embeddings), axis=1, keepdims =True))
+            norm = tf.sqrt(tf.reduce_sum(input_tensor=tf.square(self.code_embeddings), axis=1, keepdims=True))
             final_embeddings = self.code_embeddings / norm
 
             weights_norm = tf.sqrt(tf.reduce_sum(input_tensor=tf.square(self.nce_weights), axis=1, keepdims=True))
@@ -171,4 +171,3 @@ class ConceptModel(ModelTemplate):
             final_wgt_sim = tf.matmul(valid_embeddings, self.final_weights, transpose_b=True)
 
         return final_emb_sim, final_wgt_sim
-

@@ -39,7 +39,6 @@ class Configs(object):
         # @ ----------------Hierarchical TeSa----------------------
         parser.add_argument('--is_plus_date', type='bool', default=True, help='add temporal interval')
         parser.add_argument('--is_plus_sa', type='bool', default=True, help='add multi-dim self-attention')
-        parser.add_argument('--task_type', type=str, default='none', help='type1: dx and readmission in future visit;type2: los and death in current visit')
         parser.add_argument('--predict_type', type=str, default='dx', help='dx:diagnosis; re:readmission,death: mortality, los: length of stay')
 
         # @ ----------training ------
@@ -87,7 +86,7 @@ class Configs(object):
         self.processed_dir = self.mkdir(self.result_dir, 'processed_data')
         self.processed_task_dir = self.mkdir(self.processed_dir, self.task)
 
-        self.processed_name = '_'.join([self.data_source, str(self.skip_window), self.task, self.task_type]) + '.pickle'
+        self.processed_name = '_'.join([self.data_source, str(self.skip_window), self.task]) + '.pickle'
 
         self.processed_path = join(self.processed_task_dir, self.processed_name)
         # self.dict_path = join(self.dict_dir, self.dict_name)
@@ -97,7 +96,7 @@ class Configs(object):
         os.environ["CUDA_VISIBLE_DEVICES"] = str(self.gpu)
 
 
-        self.log_name = self.get_params_str(['data_source', 'model', 'task_type',
+        self.log_name = self.get_params_str(['data_source', 'model',
                                              'max_epoch', 'train_batch_size', 'predict_type'])
 
     def get_params_str(self, params):
