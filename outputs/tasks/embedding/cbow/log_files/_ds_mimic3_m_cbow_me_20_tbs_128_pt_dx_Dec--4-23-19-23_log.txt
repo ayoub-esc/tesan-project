@@ -1,0 +1,76 @@
+12/04/2022 11:19:23 PM model parameters:--------------------
+12/04/2022 11:19:23 PM _ds_mimic3_m_cbow_me_20_tbs_128_pt_dx
+12/04/2022 11:19:23 PM model parameters:--------------------
+12/04/2022 11:19:23 PM _ds_mimic3_m_cbow_me_20_tbs_128_pt_dx
+12/04/2022 11:19:23 PM From /Users/ayoub/miniconda3/envs/tesan-master/lib/python3.9/site-packages/tensorflow/python/compat/v2_compat.py:107: disable_resource_variables (from tensorflow.python.ops.variable_scope) is deprecated and will be removed in a future version.
+Instructions for updating:
+non-resource variables are not supported in the long term
+12/04/2022 11:19:24 PM ------------------------------
+12/04/2022 11:19:24 PM Trying to load processed data from /Users/ayoub/Documents/tesan-masterv2/dataset/processed/mortality_mimic3.pickle
+12/04/2022 11:19:24 PM Have found the file, loading...
+12/04/2022 11:19:24 PM Done
+12/04/2022 11:19:24 PM From /Users/ayoub/Documents/tesan-masterv2/./src/nn_utils/rnn.py:14: dynamic_rnn (from tensorflow.python.ops.rnn) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `keras.layers.RNN(cell)`, which is equivalent to this API
+12/04/2022 11:19:24 PM From /Users/ayoub/miniconda3/envs/tesan-master/lib/python3.9/site-packages/keras/layers/rnn/legacy_cells.py:588: calling Constant.__init__ (from tensorflow.python.ops.init_ops) with dtype is deprecated and will be removed in a future version.
+Instructions for updating:
+Call initializer instance with the dtype argument instead of passing it to the constructor
+12/04/2022 11:19:24 PM From /Users/ayoub/miniconda3/envs/tesan-master/lib/python3.9/site-packages/keras/layers/rnn/legacy_cells.py:602: calling Zeros.__init__ (from tensorflow.python.ops.init_ops) with dtype is deprecated and will be removed in a future version.
+Instructions for updating:
+Call initializer instance with the dtype argument instead of passing it to the constructor
+12/04/2022 11:19:24 PM From /Users/ayoub/miniconda3/envs/tesan-master/lib/python3.9/site-packages/tensorflow/python/training/rmsprop.py:188: calling Ones.__init__ (from tensorflow.python.ops.init_ops) with dtype is deprecated and will be removed in a future version.
+Instructions for updating:
+Call initializer instance with the dtype argument instead of passing it to the constructor
+12/04/2022 11:19:25 PM ------------------------------
+12/04/2022 11:19:25 PM Begin training...
+12/04/2022 11:19:27 PM Average loss at step 10: 0.008494545102119446 
+12/04/2022 11:19:27 PM validating the accuracy.....
+12/04/2022 11:19:27 PM accuracy: 0.5
+12/04/2022 11:19:27 PM validating more metrics.....
+12/04/2022 11:19:27 PM metrics: [0.5, 0.3283582089552239, 0.7586206896551724, 0.4, 0.4583333333333333, 0.5986206896551725, 0.31152648746533707, 0.4583333333333333]
+12/04/2022 11:19:28 PM Average loss at step 20: 0.00849918133020401 
+12/04/2022 11:19:28 PM validating the accuracy.....
+12/04/2022 11:19:28 PM accuracy: 0.5192308
+12/04/2022 11:19:28 PM validating more metrics.....
+12/04/2022 11:19:28 PM metrics: [0.5192307692307693, 0.3384615384615385, 0.7586206896551724, 0.4266666666666667, 0.46808510638297873, 0.5986206896551725, 0.31152648746533707, 0.46808510638297873]
+12/04/2022 11:19:30 PM Average loss at step 30: 0.00852493393421173 
+12/04/2022 11:19:30 PM validating the accuracy.....
+12/04/2022 11:19:30 PM accuracy: 0.5192308
+12/04/2022 11:19:30 PM validating more metrics.....
+12/04/2022 11:19:30 PM metrics: [0.5192307692307693, 0.3384615384615385, 0.7586206896551724, 0.4266666666666667, 0.46808510638297873, 0.59816091954023, 0.31131170008399145, 0.46808510638297873]
+12/04/2022 11:19:31 PM Average loss at step 40: 0.008481631934642792 
+12/04/2022 11:19:31 PM validating the accuracy.....
+12/04/2022 11:19:31 PM accuracy: 0.52884614
+12/04/2022 11:19:31 PM validating more metrics.....
+12/04/2022 11:19:31 PM metrics: [0.5288461538461539, 0.3387096774193548, 0.7241379310344828, 0.4533333333333333, 0.46153846153846156, 0.5986206896551725, 0.31150165005876607, 0.4615384615384615]
+12/04/2022 11:19:33 PM Average loss at step 50: 0.00849570858478546 
+12/04/2022 11:19:33 PM validating the accuracy.....
+12/04/2022 11:19:33 PM accuracy: 0.52884614
+12/04/2022 11:19:33 PM validating more metrics.....
+12/04/2022 11:19:33 PM metrics: [0.5288461538461539, 0.3333333333333333, 0.6896551724137931, 0.4666666666666667, 0.449438202247191, 0.5981609195402299, 0.3114607726160591, 0.449438202247191]
+12/04/2022 11:19:35 PM Average loss at step 60: 0.008519144356250763 
+12/04/2022 11:19:35 PM validating the accuracy.....
+12/04/2022 11:19:35 PM accuracy: 0.53846157
+12/04/2022 11:19:35 PM validating more metrics.....
+12/04/2022 11:19:35 PM metrics: [0.5384615384615384, 0.3389830508474576, 0.6896551724137931, 0.48, 0.45454545454545453, 0.5977011494252873, 0.31099211222663237, 0.45454545454545453]
+12/04/2022 11:19:36 PM Average loss at step 70: 0.008477363646030425 
+12/04/2022 11:19:36 PM validating the accuracy.....
+12/04/2022 11:19:36 PM accuracy: 0.5480769
+12/04/2022 11:19:36 PM validating more metrics.....
+12/04/2022 11:19:36 PM metrics: [0.5480769230769231, 0.3392857142857143, 0.6551724137931034, 0.5066666666666667, 0.4470588235294118, 0.5990804597701149, 0.3118890514921734, 0.44705882352941173]
+12/04/2022 11:19:38 PM Average loss at step 80: 0.008502584755420685 
+12/04/2022 11:19:38 PM validating the accuracy.....
+12/04/2022 11:19:38 PM accuracy: 0.5480769
+12/04/2022 11:19:38 PM validating more metrics.....
+12/04/2022 11:19:38 PM metrics: [0.5480769230769231, 0.3269230769230769, 0.5862068965517241, 0.5333333333333333, 0.41975308641975306, 0.5977011494252874, 0.31095378825452136, 0.41975308641975306]
+12/04/2022 11:19:39 PM Average loss at step 90: 0.008467677652835846 
+12/04/2022 11:19:39 PM validating the accuracy.....
+12/04/2022 11:19:39 PM accuracy: 0.5865385
+12/04/2022 11:19:39 PM validating more metrics.....
+12/04/2022 11:19:39 PM metrics: [0.5865384615384616, 0.3409090909090909, 0.5172413793103449, 0.6133333333333333, 0.410958904109589, 0.59816091954023, 0.31141428042709807, 0.410958904109589]
+12/04/2022 11:19:41 PM Average loss at step 100: 0.008469956576824188 
+12/04/2022 11:19:41 PM validating the accuracy.....
+12/04/2022 11:19:41 PM accuracy: 0.6057693
+12/04/2022 11:19:41 PM validating more metrics.....
+12/04/2022 11:19:41 PM metrics: [0.6057692307692307, 0.3333333333333333, 0.41379310344827586, 0.68, 0.36923076923076925, 0.591264367816092, 0.3070623097751144, 0.36923076923076925]
+12/04/2022 11:19:41 PM Done

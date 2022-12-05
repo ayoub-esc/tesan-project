@@ -5,6 +5,7 @@ from src.nn_utils.attention import multi_dimensional_attention, self_attention_w
     temporal_interval_sa_with_dense, interval_with_dense
 from src.embedding.concept.ablation_study import normal_attention
 from src.template.model import ModelTemplate
+from src.nn_utils.general import mask_for_high_rank
 
 
 class ConceptModel(ModelTemplate):
@@ -149,6 +150,11 @@ class ConceptModel(ModelTemplate):
 
                 # attention pooling
                 context_fusion = multi_dimensional_attention(cntxt_embed, self.context_mask, is_train=True)
+
+        elif self.model_type == 'cbow' or self.model_type == 'sg':
+            with tf.name_scope(self.model_type):
+                cntxt_embed = mask_for_high_rank(context_embed, self.context_mask)# bs,sl,vec
+                context_fusion = tf.reduce_mean(cntxt_embed, 1)
 
         return context_fusion, code_embeddings
 

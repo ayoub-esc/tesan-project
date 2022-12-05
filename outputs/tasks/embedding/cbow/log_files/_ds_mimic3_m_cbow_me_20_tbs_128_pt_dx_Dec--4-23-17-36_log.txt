@@ -1,0 +1,65 @@
+12/04/2022 11:17:36 PM model parameters:--------------------
+12/04/2022 11:17:36 PM _ds_mimic3_m_cbow_me_20_tbs_128_pt_dx
+12/04/2022 11:17:36 PM model parameters:--------------------
+12/04/2022 11:17:36 PM _ds_mimic3_m_cbow_me_20_tbs_128_pt_dx
+12/04/2022 11:17:36 PM From /Users/ayoub/miniconda3/envs/tesan-master/lib/python3.9/site-packages/tensorflow/python/compat/v2_compat.py:107: disable_resource_variables (from tensorflow.python.ops.variable_scope) is deprecated and will be removed in a future version.
+Instructions for updating:
+non-resource variables are not supported in the long term
+12/04/2022 11:17:36 PM ------------------------------
+12/04/2022 11:17:36 PM Trying to load processed data from /Users/ayoub/Documents/tesan-masterv2/dataset/processed/mortality_mimic3.pickle
+12/04/2022 11:17:36 PM Have found the file, loading...
+12/04/2022 11:17:36 PM Done
+12/04/2022 11:17:36 PM From /Users/ayoub/Documents/tesan-masterv2/./src/nn_utils/rnn.py:14: dynamic_rnn (from tensorflow.python.ops.rnn) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `keras.layers.RNN(cell)`, which is equivalent to this API
+12/04/2022 11:17:36 PM From /Users/ayoub/miniconda3/envs/tesan-master/lib/python3.9/site-packages/keras/layers/rnn/legacy_cells.py:588: calling Constant.__init__ (from tensorflow.python.ops.init_ops) with dtype is deprecated and will be removed in a future version.
+Instructions for updating:
+Call initializer instance with the dtype argument instead of passing it to the constructor
+12/04/2022 11:17:36 PM From /Users/ayoub/miniconda3/envs/tesan-master/lib/python3.9/site-packages/keras/layers/rnn/legacy_cells.py:602: calling Zeros.__init__ (from tensorflow.python.ops.init_ops) with dtype is deprecated and will be removed in a future version.
+Instructions for updating:
+Call initializer instance with the dtype argument instead of passing it to the constructor
+12/04/2022 11:17:37 PM From /Users/ayoub/miniconda3/envs/tesan-master/lib/python3.9/site-packages/tensorflow/python/training/rmsprop.py:188: calling Ones.__init__ (from tensorflow.python.ops.init_ops) with dtype is deprecated and will be removed in a future version.
+Instructions for updating:
+Call initializer instance with the dtype argument instead of passing it to the constructor
+12/04/2022 11:17:37 PM ------------------------------
+12/04/2022 11:17:37 PM Begin training...
+12/04/2022 11:17:39 PM Average loss at step 10: 0.00844684225320816 
+12/04/2022 11:17:39 PM validating the accuracy.....
+12/04/2022 11:17:39 PM accuracy: 0.6442308
+12/04/2022 11:17:39 PM validating more metrics.....
+12/04/2022 11:17:39 PM metrics: [0.6442307692307693, 0.375, 0.41379310344827586, 0.7333333333333333, 0.39344262295081966, 0.5379310344827586, 0.3503889242335555, 0.3934426229508197]
+12/04/2022 11:17:41 PM Average loss at step 20: 0.008453583717346192 
+12/04/2022 11:17:41 PM validating the accuracy.....
+12/04/2022 11:17:41 PM accuracy: 0.6538462
+12/04/2022 11:17:41 PM validating more metrics.....
+12/04/2022 11:17:41 PM metrics: [0.6538461538461539, 0.3870967741935484, 0.41379310344827586, 0.7466666666666667, 0.4, 0.5379310344827586, 0.3503889242335555, 0.39999999999999997]
+12/04/2022 11:17:42 PM Average loss at step 30: 0.008476500689983369 
+12/04/2022 11:17:42 PM validating the accuracy.....
+12/04/2022 11:17:42 PM accuracy: 0.66346157
+12/04/2022 11:17:42 PM validating more metrics.....
+12/04/2022 11:17:42 PM metrics: [0.6634615384615384, 0.4, 0.41379310344827586, 0.76, 0.4067796610169492, 0.5383908045977013, 0.3505195107511723, 0.4067796610169491]
+12/04/2022 11:17:44 PM Average loss at step 40: 0.00843392413854599 
+12/04/2022 11:17:44 PM validating the accuracy.....
+12/04/2022 11:17:44 PM accuracy: 0.6538462
+12/04/2022 11:17:44 PM validating more metrics.....
+12/04/2022 11:17:44 PM metrics: [0.6538461538461539, 0.3793103448275862, 0.3793103448275862, 0.76, 0.3793103448275862, 0.5379310344827586, 0.35039659437793225, 0.3793103448275862]
+12/04/2022 11:17:45 PM Average loss at step 50: 0.008447766780853272 
+12/04/2022 11:17:45 PM validating the accuracy.....
+12/04/2022 11:17:45 PM accuracy: 0.66346157
+12/04/2022 11:17:45 PM validating more metrics.....
+12/04/2022 11:17:45 PM metrics: [0.6634615384615384, 0.38461538461538464, 0.3448275862068966, 0.7866666666666666, 0.36363636363636365, 0.5374712643678161, 0.35025938933860085, 0.3636363636363637]
+12/04/2022 11:17:47 PM Average loss at step 60: 0.008469523966312408 
+12/04/2022 11:17:47 PM validating the accuracy.....
+12/04/2022 11:17:47 PM accuracy: 0.68269235
+12/04/2022 11:17:47 PM validating more metrics.....
+12/04/2022 11:17:47 PM metrics: [0.6826923076923077, 0.4166666666666667, 0.3448275862068966, 0.8133333333333334, 0.37735849056603776, 0.5370114942528736, 0.3499305623768999, 0.37735849056603776]
+12/04/2022 11:17:48 PM Average loss at step 70: 0.008430112779140473 
+12/04/2022 11:17:48 PM validating the accuracy.....
+12/04/2022 11:17:48 PM accuracy: 0.6730769
+12/04/2022 11:17:48 PM validating more metrics.....
+12/04/2022 11:17:48 PM metrics: [0.6730769230769231, 0.38095238095238093, 0.27586206896551724, 0.8266666666666667, 0.32, 0.5342528735632184, 0.3469626933941211, 0.32]
+12/04/2022 11:17:50 PM Average loss at step 80: 0.008451266527175903 
+12/04/2022 11:17:50 PM validating the accuracy.....
+12/04/2022 11:17:50 PM accuracy: 0.68269235
+12/04/2022 11:17:50 PM validating more metrics.....
+12/04/2022 11:17:50 PM metrics: [0.6826923076923077, 0.375, 0.20689655172413793, 0.8666666666666667, 0.26666666666666666, 0.5333333333333334, 0.34857899104447126, 0.26666666666666666]

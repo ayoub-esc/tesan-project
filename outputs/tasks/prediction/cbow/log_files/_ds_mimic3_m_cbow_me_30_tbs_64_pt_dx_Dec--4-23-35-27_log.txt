@@ -1,0 +1,56 @@
+12/04/2022 11:35:27 PM model parameters:--------------------
+12/04/2022 11:35:27 PM _ds_mimic3_m_cbow_me_30_tbs_64_pt_dx
+12/04/2022 11:35:27 PM model parameters:--------------------
+12/04/2022 11:35:27 PM _ds_mimic3_m_cbow_me_30_tbs_64_pt_dx
+12/04/2022 11:35:27 PM From /Users/ayoub/miniconda3/envs/tesan-master/lib/python3.9/site-packages/tensorflow/python/compat/v2_compat.py:107: disable_resource_variables (from tensorflow.python.ops.variable_scope) is deprecated and will be removed in a future version.
+Instructions for updating:
+non-resource variables are not supported in the long term
+12/04/2022 11:35:28 PM ------------------------------
+12/04/2022 11:35:28 PM Trying to load processed data from /Users/ayoub/Documents/tesan-masterv2/outputs/processed_data/prediction/mimic3_6_prediction.pickle
+12/04/2022 11:35:28 PM Have found the file, loading...
+12/04/2022 11:35:28 PM Done
+12/04/2022 11:35:28 PM From /Users/ayoub/miniconda3/envs/tesan-master/lib/python3.9/site-packages/tensorflow/python/training/rmsprop.py:188: calling Ones.__init__ (from tensorflow.python.ops.init_ops) with dtype is deprecated and will be removed in a future version.
+Instructions for updating:
+Call initializer instance with the dtype argument instead of passing it to the constructor
+12/04/2022 11:35:28 PM ------------------------------
+12/04/2022 11:35:28 PM Begin training...
+12/04/2022 11:35:34 PM Average loss at epoch 0: 35.881347475449246 
+12/04/2022 11:35:34 PM ICD NNS P@1 Score:0.086
+12/04/2022 11:35:35 PM number of dx_labels in ICD9: 17
+12/04/2022 11:35:35 PM ICD, NMI Score:0.0363
+12/04/2022 11:35:35 PM CCS NNS P@1 Score:0.013
+12/04/2022 11:35:37 PM number of dx_labels in CCS: 214
+12/04/2022 11:35:37 PM CCS, NMI Score:0.5915
+12/04/2022 11:35:37 PM weight: 0.0363 0.5915 0.086 0.013
+12/04/2022 11:35:43 PM Average loss at epoch 1: 35.53702696205798 
+12/04/2022 11:35:43 PM ICD NNS P@1 Score:0.088
+12/04/2022 11:35:45 PM number of dx_labels in ICD9: 17
+12/04/2022 11:35:45 PM ICD, NMI Score:0.0348
+12/04/2022 11:35:45 PM CCS NNS P@1 Score:0.013
+12/04/2022 11:35:47 PM number of dx_labels in CCS: 214
+12/04/2022 11:35:47 PM CCS, NMI Score:0.5911
+12/04/2022 11:35:47 PM weight: 0.0348 0.5911 0.088 0.013
+12/04/2022 11:35:53 PM Average loss at epoch 2: 35.449039256572725 
+12/04/2022 11:35:53 PM ICD NNS P@1 Score:0.086
+12/04/2022 11:35:53 PM number of dx_labels in ICD9: 17
+12/04/2022 11:35:53 PM ICD, NMI Score:0.0377
+12/04/2022 11:35:53 PM CCS NNS P@1 Score:0.013
+12/04/2022 11:35:56 PM number of dx_labels in CCS: 214
+12/04/2022 11:35:56 PM CCS, NMI Score:0.59
+12/04/2022 11:35:56 PM weight: 0.0377 0.59 0.086 0.013
+12/04/2022 11:36:01 PM Average loss at epoch 3: 35.11413720495123 
+12/04/2022 11:36:01 PM ICD NNS P@1 Score:0.086
+12/04/2022 11:36:02 PM number of dx_labels in ICD9: 17
+12/04/2022 11:36:02 PM ICD, NMI Score:0.0325
+12/04/2022 11:36:02 PM CCS NNS P@1 Score:0.013
+12/04/2022 11:36:03 PM number of dx_labels in CCS: 214
+12/04/2022 11:36:03 PM CCS, NMI Score:0.5918
+12/04/2022 11:36:03 PM weight: 0.0325 0.5918 0.086 0.013
+12/04/2022 11:36:09 PM Average loss at epoch 4: 34.687795927127205 
+12/04/2022 11:36:09 PM ICD NNS P@1 Score:0.087
+12/04/2022 11:36:10 PM number of dx_labels in ICD9: 17
+12/04/2022 11:36:10 PM ICD, NMI Score:0.0353
+12/04/2022 11:36:11 PM CCS NNS P@1 Score:0.013
+12/04/2022 11:36:12 PM number of dx_labels in CCS: 214
+12/04/2022 11:36:12 PM CCS, NMI Score:0.5952
+12/04/2022 11:36:12 PM weight: 0.0353 0.5952 0.087 0.013

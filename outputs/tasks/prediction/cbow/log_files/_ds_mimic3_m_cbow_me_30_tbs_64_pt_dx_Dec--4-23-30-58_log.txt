@@ -1,0 +1,14 @@
+12/04/2022 11:30:58 PM model parameters:--------------------
+12/04/2022 11:30:58 PM _ds_mimic3_m_cbow_me_30_tbs_64_pt_dx
+12/04/2022 11:30:58 PM model parameters:--------------------
+12/04/2022 11:30:58 PM _ds_mimic3_m_cbow_me_30_tbs_64_pt_dx
+12/04/2022 11:30:58 PM From /Users/ayoub/miniconda3/envs/tesan-master/lib/python3.9/site-packages/tensorflow/python/compat/v2_compat.py:107: disable_resource_variables (from tensorflow.python.ops.variable_scope) is deprecated and will be removed in a future version.
+Instructions for updating:
+non-resource variables are not supported in the long term
+12/04/2022 11:30:59 PM ------------------------------
+12/04/2022 11:30:59 PM Trying to load processed data from /Users/ayoub/Documents/tesan-masterv2/outputs/processed_data/prediction/mimic3_6_prediction.pickle
+12/04/2022 11:30:59 PM Have not found the file
+12/04/2022 11:30:59 PM Done
+12/04/2022 11:30:59 PM ------------------------------
+12/04/2022 11:30:59 PM Saving data to /Users/ayoub/Documents/tesan-masterv2/outputs/processed_data/prediction/mimic3_6_prediction.pickle
+12/04/2022 11:30:59 PM Done

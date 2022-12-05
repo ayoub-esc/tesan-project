@@ -1,0 +1,25 @@
+12/04/2022 11:37:05 PM model parameters:--------------------
+12/04/2022 11:37:05 PM _ds_mimic3_m_cbow_me_1_tbs_64_pt_dx
+12/04/2022 11:37:05 PM model parameters:--------------------
+12/04/2022 11:37:05 PM _ds_mimic3_m_cbow_me_1_tbs_64_pt_dx
+12/04/2022 11:37:05 PM From /Users/ayoub/miniconda3/envs/tesan-master/lib/python3.9/site-packages/tensorflow/python/compat/v2_compat.py:107: disable_resource_variables (from tensorflow.python.ops.variable_scope) is deprecated and will be removed in a future version.
+Instructions for updating:
+non-resource variables are not supported in the long term
+12/04/2022 11:37:06 PM ------------------------------
+12/04/2022 11:37:06 PM Trying to load processed data from /Users/ayoub/Documents/tesan-masterv2/outputs/processed_data/prediction/mimic3_6_prediction.pickle
+12/04/2022 11:37:06 PM Have found the file, loading...
+12/04/2022 11:37:06 PM Done
+12/04/2022 11:37:06 PM From /Users/ayoub/miniconda3/envs/tesan-master/lib/python3.9/site-packages/tensorflow/python/training/rmsprop.py:188: calling Ones.__init__ (from tensorflow.python.ops.init_ops) with dtype is deprecated and will be removed in a future version.
+Instructions for updating:
+Call initializer instance with the dtype argument instead of passing it to the constructor
+12/04/2022 11:37:06 PM ------------------------------
+12/04/2022 11:37:06 PM Begin training...
+12/04/2022 11:37:12 PM Average loss at epoch 0: 35.88165408770244 
+12/04/2022 11:37:12 PM ICD NNS P@1 Score:0.089
+12/04/2022 11:37:14 PM number of dx_labels in ICD9: 17
+12/04/2022 11:37:14 PM ICD, NMI Score:0.0345
+12/04/2022 11:37:14 PM CCS NNS P@1 Score:0.008
+12/04/2022 11:37:17 PM number of dx_labels in CCS: 214
+12/04/2022 11:37:17 PM CCS, NMI Score:0.5931
+12/04/2022 11:37:17 PM weight: 0.0345 0.5931 0.089 0.008
+12/04/2022 11:37:17 PM Done

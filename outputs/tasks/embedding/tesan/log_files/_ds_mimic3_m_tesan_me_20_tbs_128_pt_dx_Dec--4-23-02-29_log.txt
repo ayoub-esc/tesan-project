@@ -1,0 +1,18 @@
+12/04/2022 11:02:29 PM model parameters:--------------------
+12/04/2022 11:02:29 PM _ds_mimic3_m_tesan_me_20_tbs_128_pt_dx
+12/04/2022 11:02:29 PM model parameters:--------------------
+12/04/2022 11:02:29 PM _ds_mimic3_m_tesan_me_20_tbs_128_pt_dx
+12/04/2022 11:02:29 PM From /Users/ayoub/miniconda3/envs/tesan-master/lib/python3.9/site-packages/tensorflow/python/compat/v2_compat.py:107: disable_resource_variables (from tensorflow.python.ops.variable_scope) is deprecated and will be removed in a future version.
+Instructions for updating:
+non-resource variables are not supported in the long term
+12/04/2022 11:02:30 PM ------------------------------
+12/04/2022 11:02:30 PM Trying to load processed data from /Users/ayoub/Documents/tesan-masterv2/outputs/processed_data/embedding/mimic3_9_embedding.pickle
+12/04/2022 11:02:30 PM Have not found the file
+12/04/2022 11:02:30 PM Done
+12/04/2022 11:02:32 PM ------------------------------
+12/04/2022 11:02:32 PM Saving data to /Users/ayoub/Documents/tesan-masterv2/outputs/processed_data/embedding/mimic3_9_embedding.pickle
+12/04/2022 11:02:33 PM Done
+12/04/2022 11:02:33 PM From /Users/ayoub/miniconda3/envs/tesan-master/lib/python3.9/site-packages/tensorflow/python/training/rmsprop.py:188: calling Ones.__init__ (from tensorflow.python.ops.init_ops) with dtype is deprecated and will be removed in a future version.
+Instructions for updating:
+Call initializer instance with the dtype argument instead of passing it to the constructor
+12/04/2022 11:02:42 PM weight: 0.0558 0.4779 0.081 0.011

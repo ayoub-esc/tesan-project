@@ -60,4 +60,4 @@ python src/embedding/concept/train_tesan.py --model interval --data_source mimic
 
  ## Whats Missing?
 
- The main thing that is missing from this code base is the code needed to train and create the various baseline models. The code also needs a testing mode to be able to test the models on a seperate test set instead of relying on training metrics.
+ The main thing that is missing from this code base is the code needed to train and create the various baseline models. A few of the more basic baseline models (CBOW and Skip-gram) can be tested via the provided .vect files.
